@@ -18,11 +18,11 @@ import {
   Instagram,
   Facebook,
   Star,
+  ImageIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import heroImg from "@/assets/dra-leila-hero.jpg";
-import aboutImg from "@/assets/dra-leila-about.jpg";
+
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
@@ -180,15 +180,13 @@ function Hero() {
         <Reveal delay={150}>
           <div className="relative">
             <div className="absolute -inset-4 md:-inset-6 border border-primary/30 rounded-[2rem] -rotate-2" />
-            <img
-              src={heroImg}
-              alt="Dra. Leila Lopes — ginecologista em Fortaleza"
-              width={1024}
-              height={1280}
-              className="relative w-full h-auto rounded-[1.75rem] object-cover shadow-elegant"
-            />
+            <div className="relative aspect-[4/5] w-full rounded-[1.75rem] bg-[var(--blush)] border border-primary/15 flex flex-col items-center justify-center text-primary/60 shadow-elegant">
+              <ImageIcon size={40} strokeWidth={1.5} />
+              <span className="mt-3 text-xs uppercase tracking-[0.25em]">Foto da Dra. Leila</span>
+            </div>
           </div>
         </Reveal>
+
       </div>
     </section>
   );
@@ -199,15 +197,12 @@ function About() {
     <section id="sobre" className="py-20 md:py-28 bg-white">
       <div className="container-narrow grid md:grid-cols-2 gap-16 items-center">
         <Reveal>
-          <img
-            src={aboutImg}
-            alt="Dra. Leila em consulta"
-            width={1024}
-            height={1024}
-            loading="lazy"
-            className="w-full h-auto rounded-2xl object-cover shadow-soft"
-          />
+          <div className="aspect-square w-full rounded-2xl bg-[var(--blush)] border border-primary/15 flex flex-col items-center justify-center text-primary/60 shadow-soft">
+            <ImageIcon size={40} strokeWidth={1.5} />
+            <span className="mt-3 text-xs uppercase tracking-[0.25em]">Foto secundária</span>
+          </div>
         </Reveal>
+
         <Reveal delay={100}>
           <div>
             <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4 flex items-center gap-3">
