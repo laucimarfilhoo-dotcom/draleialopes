@@ -400,7 +400,7 @@ function Contact() {
             </h2>
             <p className="mt-4 text-primary-foreground/80 leading-relaxed max-w-md">
               Nosso consultório é um espaço pensado para o seu conforto. Agende sua consulta
-              pelo WhatsApp — respondemos com brevidade.
+              pelo WhatsApp. Respondemos com brevidade.
             </p>
 
             <div className="mt-8 space-y-5">
@@ -409,7 +409,7 @@ function Contact() {
                 <div>
                   <div className="font-medium">Endereço</div>
                   <div className="text-primary-foreground/80 text-sm">
-                    Av. Santos Dumont, 0000 · Aldeota · Fortaleza — CE
+                    Av. Santos Dumont, 0000 · Aldeota · Fortaleza, CE
                   </div>
                 </div>
               </div>
