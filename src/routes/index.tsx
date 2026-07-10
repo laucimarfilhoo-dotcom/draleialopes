@@ -30,6 +30,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Accordion, AccordionItem, AccordionContent } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 import whatsappIcon from "@/assets/whatsapp-icon.png.asset.json";
+import draLeilaHero from "@/assets/dra-leila-hero.webp.asset.json";
 
 
 export const Route = createFileRoute("/")({
