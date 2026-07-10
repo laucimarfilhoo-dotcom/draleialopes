@@ -29,10 +29,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Accordion, AccordionItem, AccordionContent } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
-import whatsappIcon from "@/assets/whatsapp-icon.png.asset.json";
-import draLeilaHero from "@/assets/dra-leila-hero.webp.asset.json";
-import draLeilaAbout from "@/assets/dra-leila-about.webp.asset.json";
-import logoLeila from "@/assets/logo-leila-menu.png.asset.json";
+const whatsappIcon = { url: "/images/whatsapp-icon.png" };
+const draLeilaHero = { url: "/images/dra-leila-hero.webp" };
+const draLeilaAbout = { url: "/images/dra-leila-about.webp" };
+const logoLeila = { url: "/images/logo-leila-menu.png" };
 
 
 export const Route = createFileRoute("/")({
