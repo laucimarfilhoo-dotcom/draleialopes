@@ -88,10 +88,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "Ginecologia e estética íntima com atendimento humanizado em Fortaleza. 25 anos de experiência.",
+          "Dra. Leila Lopes, ginecologista em Fortaleza, CE. 25 anos de experiência em ginecologia e estética íntima com atendimento humanizado. CRM 6968 · RQE 3081.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Dra. Leila Lopes | Ginecologista em Fortaleza" },
+      { name: "twitter:description", content: "Dra. Leila Lopes, ginecologista em Fortaleza, CE. 25 anos de experiência em ginecologia e estética íntima com atendimento humanizado. CRM 6968 · RQE 3081." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4a09781a-1557-44ff-aed4-3620caee0e40/id-preview-eb8a354e--bd85a68e-0571-4adf-919e-fc344e06323f.lovable.app-1783651103235.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4a09781a-1557-44ff-aed4-3620caee0e40/id-preview-eb8a354e--bd85a68e-0571-4adf-919e-fc344e06323f.lovable.app-1783651103235.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
