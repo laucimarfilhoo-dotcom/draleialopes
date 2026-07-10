@@ -32,6 +32,7 @@ import { cn } from "@/lib/utils";
 import whatsappIcon from "@/assets/whatsapp-icon.png.asset.json";
 import draLeilaHero from "@/assets/dra-leila-hero.webp.asset.json";
 import draLeilaAbout from "@/assets/dra-leila-about.webp.asset.json";
+import logoLeila from "@/assets/logo-leila-lopes.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -208,11 +209,12 @@ function Header() {
   return (
     <header className="sticky top-0 z-40 bg-primary/95 backdrop-blur border-b border-primary-hover/40 shadow-[0_1px_10px_-6px_rgba(0,0,0,0.3)]">
       <div className="container-narrow flex items-center justify-between h-18 py-4">
-        <a href="#top" className="flex flex-col leading-tight">
-          <span className="font-serif text-2xl text-primary-foreground tracking-tight">Dra. Leila Lopes</span>
-          <span className="text-[11px] uppercase tracking-[0.2em] text-primary-foreground/70">
-            Ginecologia · Estética Íntima
-          </span>
+        <a href="#top" className="flex items-center" aria-label="Dra. Leila Lopes - Ginecologia">
+          <img
+            src={logoLeila.url}
+            alt="Dra. Leila Lopes - Ginecologia"
+            className="h-14 md:h-16 w-auto object-contain"
+          />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
