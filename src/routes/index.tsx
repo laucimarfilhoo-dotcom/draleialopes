@@ -344,7 +344,7 @@ function About() {
     <section id="sobre" className="py-20 md:py-28 bg-white">
       <div className="container-narrow grid md:grid-cols-2 gap-16 items-center">
         <Reveal>
-          <div className="aspect-square w-full rounded-2xl overflow-hidden bg-[var(--blush)] border border-primary/15 shadow-soft">
+          <div className="hidden md:block aspect-square w-full rounded-2xl overflow-hidden bg-[var(--blush)] border border-primary/15 shadow-soft">
             <img
               src={draLeilaAbout.url}
               alt="Dra. Leila Lopes"
@@ -363,6 +363,14 @@ function About() {
             <h2 className="font-serif text-3xl md:text-5xl text-foreground leading-tight">
               Uma trajetória construída com <em className="text-primary not-italic">escuta</em> e ciência.
             </h2>
+            <div className="mt-8 md:hidden aspect-square w-full rounded-2xl overflow-hidden bg-[var(--blush)] border border-primary/15 shadow-soft">
+              <img
+                src={draLeilaAbout.url}
+                alt="Dra. Leila Lopes"
+                className="w-full h-full object-cover object-center"
+                loading="lazy"
+              />
+            </div>
             <p className="mt-6 text-muted-foreground leading-relaxed">
               Formada em Medicina com especialização em Ginecologia e Obstetrícia, a Dra. Leila
               Lopes acumula 25 anos de prática clínica em Fortaleza. Sua abordagem une o rigor
