@@ -40,7 +40,90 @@ const navItems = [
   { label: "Sobre", href: "#sobre" },
   { label: "Serviços", href: "#servicos" },
   { label: "Diferenciais", href: "#diferenciais" },
+  { label: "FAQ", href: "#faq" },
   { label: "Contato", href: "#contato" },
+];
+
+type FaqItem = { q: string; a: string };
+const faqGroups: { id: string; label: string; items: FaqItem[] }[] = [
+  {
+    id: "diu",
+    label: "DIU e Implanon",
+    items: [
+      {
+        q: "A colocação do DIU dói?",
+        a: "A maioria das mulheres relata apenas um leve desconforto, semelhante a uma cólica menstrual, e o procedimento é rápido. Usamos técnicas de acolhimento e orientações prévias para deixar tudo mais tranquilo. Converse com a Dra. Leila na consulta para uma avaliação individualizada.",
+      },
+      {
+        q: "Quanto tempo dura o DIU?",
+        a: "Depende do modelo. O DIU de cobre pode durar até 10 anos, o DIU hormonal costuma durar de 5 a 8 anos, e o Implanon (subcutâneo) tem duração de cerca de 3 anos.",
+      },
+      {
+        q: "O DIU engorda ou causa outros efeitos colaterais?",
+        a: "O DIU de cobre não é hormonal e não engorda. Os modelos hormonais podem provocar mudanças leves no ciclo, como redução ou ausência de menstruação, e raramente alteração de peso. Cada organismo responde de um jeito.",
+      },
+      {
+        q: "Quem não pode usar DIU?",
+        a: "Existem contraindicações específicas, como algumas infecções em atividade, malformações uterinas ou sangramentos sem causa esclarecida. A indicação sempre depende de uma avaliação clínica. Converse com a Dra. Leila para saber se é o método ideal para você.",
+      },
+      {
+        q: "Depois de retirar o DIU, quanto tempo leva para engravidar?",
+        a: "A fertilidade costuma retornar rapidamente, muitas vezes já no primeiro ciclo após a retirada. Não há efeito prolongado sobre a capacidade de engravidar.",
+      },
+    ],
+  },
+  {
+    id: "laser",
+    label: "Laser e Ninfoplastia",
+    items: [
+      {
+        q: "Ninfoplastia é só estética ou também tem função de saúde?",
+        a: "Além do resultado estético, a ninfoplastia pode aliviar desconforto em atividades físicas, na intimidade e no uso de determinadas roupas. Muitas pacientes procuram por motivos funcionais.",
+      },
+      {
+        q: "O procedimento afeta a sensibilidade?",
+        a: "Quando realizada com técnica adequada, a ninfoplastia preserva a sensibilidade da região. O objetivo é sempre unir estética e função, mantendo o bem-estar da paciente.",
+      },
+      {
+        q: "Como é a recuperação e em quanto tempo volto às atividades normais?",
+        a: "Atividades leves geralmente retornam em poucos dias, exercícios físicos e relações íntimas costumam ser liberados após cerca de 30 dias. O tempo exato varia de paciente para paciente. Converse com a Dra. Leila para orientações individualizadas.",
+      },
+      {
+        q: "As cicatrizes ficam visíveis?",
+        a: "As suturas são finas e feitas em locais estratégicos, ficando bastante discretas com o tempo. O cuidado no pós-operatório é fundamental para o melhor resultado.",
+      },
+      {
+        q: "Qual a diferença entre o laser íntimo e a cirurgia de ninfoplastia?",
+        a: "O laser íntimo é um procedimento não cirúrgico, indicado principalmente para tratar flacidez, ressecamento e rejuvenescimento da região. A ninfoplastia é uma cirurgia que remodela os pequenos lábios. Cada técnica tem indicações diferentes, definidas em consulta.",
+      },
+    ],
+  },
+  {
+    id: "menopausa",
+    label: "Menopausa",
+    items: [
+      {
+        q: "Como sei se estou entrando na menopausa?",
+        a: "Alterações no ciclo menstrual, ondas de calor, insônia, mudanças de humor e ressecamento vaginal costumam ser os primeiros sinais. Exames laboratoriais ajudam a confirmar. Converse com a Dra. Leila para uma avaliação completa.",
+      },
+      {
+        q: "A reposição hormonal é segura?",
+        a: "Quando bem indicada e acompanhada, a reposição hormonal moderna é segura e traz muitos benefícios para qualidade de vida, ossos e sono. A indicação é sempre individualizada, considerando histórico e exames de cada paciente.",
+      },
+      {
+        q: "Quais sintomas da menopausa merecem atenção médica?",
+        a: "Ondas de calor intensas, insônia persistente, alterações de humor, dor nas relações, ressecamento vaginal e sangramentos fora do padrão devem ser avaliados sem demora.",
+      },
+      {
+        q: "A menopausa afeta a libido e isso tem tratamento?",
+        a: "Sim, alterações hormonais e emocionais podem impactar a libido. Existem tratamentos eficazes, hormonais e não hormonais, além de cuidados com bem-estar geral. Converse com a Dra. Leila para uma abordagem personalizada.",
+      },
+      {
+        q: "Com que frequência devo consultar o ginecologista durante a menopausa?",
+        a: "Recomenda-se acompanhamento anual, ou em intervalos menores quando houver sintomas ativos ou tratamentos em curso. O acompanhamento próximo faz toda a diferença nessa fase.",
+      },
+    ],
+  },
 ];
 
 function useReveal() {
