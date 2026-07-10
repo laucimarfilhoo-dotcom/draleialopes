@@ -149,7 +149,7 @@ function Hero() {
               <span className="text-primary italic">delicadeza</span> e experiência.
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-lg leading-relaxed">
-              Há 25 anos acolhendo mulheres em cada fase da vida — com escuta atenta,
+              Há 25 anos acolhendo mulheres em cada fase da vida, com escuta atenta,
               ciência atualizada e um olhar dedicado à ginecologia e à estética íntima.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
