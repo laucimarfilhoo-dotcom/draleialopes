@@ -520,6 +520,104 @@ function Testimonials() {
   );
 }
 
+function FaqTrigger({ children }: { children: React.ReactNode }) {
+  return (
+    <AccordionPrimitive.Header className="flex">
+      <AccordionPrimitive.Trigger
+        className={cn(
+          "group flex flex-1 items-center justify-between gap-4 py-5 text-left font-serif text-lg md:text-xl text-foreground transition-colors hover:text-primary cursor-pointer",
+        )}
+      >
+        {children}
+        <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary group-data-[state=open]:bg-primary group-data-[state=open]:text-primary-foreground group-data-[state=open]:border-primary">
+          <Plus
+            size={18}
+            className="transition-transform duration-300 group-data-[state=open]:rotate-45"
+          />
+        </span>
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+  );
+}
+
+function Faq() {
+  return (
+    <section id="faq" className="py-20 md:py-28 bg-white">
+      <div className="container-narrow">
+        <Reveal>
+          <div className="text-center max-w-2xl mx-auto">
+            <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4">FAQ</div>
+            <h2 className="font-serif text-3xl md:text-5xl text-primary">
+              Tire suas dúvidas
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Reunimos as perguntas mais frequentes sobre nossos principais serviços. Se ficar
+              qualquer dúvida, fale conosco pelo WhatsApp.
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal delay={80}>
+          <div className="mt-12 max-w-3xl mx-auto">
+            <Tabs defaultValue={faqGroups[0].id} className="w-full">
+              <TabsList className="w-full h-auto flex flex-wrap justify-center gap-2 bg-transparent p-0 mb-8">
+                {faqGroups.map((g) => (
+                  <TabsTrigger
+                    key={g.id}
+                    value={g.id}
+                    className="rounded-full px-5 py-2 text-sm data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-primary/20 data-[state=active]:border-primary transition-all"
+                  >
+                    {g.label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+
+              {faqGroups.map((g) => (
+                <TabsContent key={g.id} value={g.id} className="mt-0">
+                  <Accordion type="single" collapsible className="w-full">
+                    {g.items.map((item, i) => (
+                      <AccordionItem
+                        key={item.q}
+                        value={`${g.id}-${i}`}
+                        className="border-b border-primary/15 last:border-b-0"
+                      >
+                        <FaqTrigger>{item.q}</FaqTrigger>
+                        <AccordionContent className="pb-6 pr-14 text-muted-foreground leading-relaxed">
+                          {item.a}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </TabsContent>
+              ))}
+            </Tabs>
+          </div>
+        </Reveal>
+
+        <Reveal delay={120}>
+          <div className="mt-14 text-center max-w-xl mx-auto rounded-2xl bg-[var(--blush)] border border-primary/15 p-8">
+            <h3 className="font-serif text-2xl text-primary">Ainda tem dúvidas?</h3>
+            <p className="mt-2 text-muted-foreground">
+              Fale diretamente com a nossa equipe pelo WhatsApp. Teremos prazer em ajudar você.
+            </p>
+            <Button asChild size="lg" className="mt-6 rounded-full px-8 h-12">
+              <a
+                href={waLink("Olá Dra. Leila, gostaria de tirar algumas dúvidas.")}
+                target="_blank"
+                rel="noopener"
+              >
+                <MessageCircle className="mr-2" size={18} />
+                Falar no WhatsApp
+              </a>
+            </Button>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+
 function Contact() {
   return (
     <section id="contato" className="py-20 md:py-28 bg-primary text-primary-foreground">
