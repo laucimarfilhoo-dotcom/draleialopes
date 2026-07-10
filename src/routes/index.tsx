@@ -80,7 +80,7 @@ export const Route = createFileRoute("/")({
 });
 
 
-const WHATSAPP_NUMBER = "5585000000000"; // placeholder — substituir
+const WHATSAPP_NUMBER = "5585996424910";
 const waLink = (msg: string) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 
