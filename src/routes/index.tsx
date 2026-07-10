@@ -19,18 +19,62 @@ import {
   Facebook,
   Star,
   ImageIcon,
+  Plus,
 } from "lucide-react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Accordion, AccordionItem, AccordionContent } from "@/components/ui/accordion";
+import { cn } from "@/lib/utils";
 import whatsappIcon from "@/assets/whatsapp-icon.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
-  head: () => ({
-    links: [{ rel: "canonical", href: "/" }],
-  }),
+  head: () => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          q: "A colocação do DIU dói?",
+          a: "A maioria das mulheres relata apenas um leve desconforto, semelhante a uma cólica menstrual, e o procedimento é rápido.",
+        },
+        {
+          q: "Quanto tempo dura o DIU?",
+          a: "Depende do modelo. O DIU de cobre pode durar até 10 anos, o hormonal de 5 a 8 anos, e o Implanon cerca de 3 anos.",
+        },
+        {
+          q: "Ninfoplastia é só estética ou também tem função de saúde?",
+          a: "Além do resultado estético, pode aliviar desconforto em atividades físicas, na intimidade e no uso de determinadas roupas.",
+        },
+        {
+          q: "Como sei se estou entrando na menopausa?",
+          a: "Alterações no ciclo, ondas de calor, insônia e ressecamento vaginal são sinais comuns. Exames laboratoriais ajudam a confirmar.",
+        },
+        {
+          q: "A reposição hormonal é segura?",
+          a: "Quando bem indicada e acompanhada, a reposição hormonal moderna é segura e traz benefícios para qualidade de vida.",
+        },
+      ].map(({ q, a }) => ({
+        "@type": "Question",
+        name: q,
+        acceptedAnswer: { "@type": "Answer", text: a },
+      })),
+    };
+    return {
+      links: [{ rel: "canonical", href: "/" }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(faqSchema),
+        },
+      ],
+    };
+  },
 });
+
 
 const WHATSAPP_NUMBER = "5585000000000"; // placeholder — substituir
 const waLink = (msg: string) =>
@@ -40,7 +84,90 @@ const navItems = [
   { label: "Sobre", href: "#sobre" },
   { label: "Serviços", href: "#servicos" },
   { label: "Diferenciais", href: "#diferenciais" },
+  { label: "FAQ", href: "#faq" },
   { label: "Contato", href: "#contato" },
+];
+
+type FaqItem = { q: string; a: string };
+const faqGroups: { id: string; label: string; items: FaqItem[] }[] = [
+  {
+    id: "diu",
+    label: "DIU e Implanon",
+    items: [
+      {
+        q: "A colocação do DIU dói?",
+        a: "A maioria das mulheres relata apenas um leve desconforto, semelhante a uma cólica menstrual, e o procedimento é rápido. Usamos técnicas de acolhimento e orientações prévias para deixar tudo mais tranquilo. Converse com a Dra. Leila na consulta para uma avaliação individualizada.",
+      },
+      {
+        q: "Quanto tempo dura o DIU?",
+        a: "Depende do modelo. O DIU de cobre pode durar até 10 anos, o DIU hormonal costuma durar de 5 a 8 anos, e o Implanon (subcutâneo) tem duração de cerca de 3 anos.",
+      },
+      {
+        q: "O DIU engorda ou causa outros efeitos colaterais?",
+        a: "O DIU de cobre não é hormonal e não engorda. Os modelos hormonais podem provocar mudanças leves no ciclo, como redução ou ausência de menstruação, e raramente alteração de peso. Cada organismo responde de um jeito.",
+      },
+      {
+        q: "Quem não pode usar DIU?",
+        a: "Existem contraindicações específicas, como algumas infecções em atividade, malformações uterinas ou sangramentos sem causa esclarecida. A indicação sempre depende de uma avaliação clínica. Converse com a Dra. Leila para saber se é o método ideal para você.",
+      },
+      {
+        q: "Depois de retirar o DIU, quanto tempo leva para engravidar?",
+        a: "A fertilidade costuma retornar rapidamente, muitas vezes já no primeiro ciclo após a retirada. Não há efeito prolongado sobre a capacidade de engravidar.",
+      },
+    ],
+  },
+  {
+    id: "laser",
+    label: "Laser e Ninfoplastia",
+    items: [
+      {
+        q: "Ninfoplastia é só estética ou também tem função de saúde?",
+        a: "Além do resultado estético, a ninfoplastia pode aliviar desconforto em atividades físicas, na intimidade e no uso de determinadas roupas. Muitas pacientes procuram por motivos funcionais.",
+      },
+      {
+        q: "O procedimento afeta a sensibilidade?",
+        a: "Quando realizada com técnica adequada, a ninfoplastia preserva a sensibilidade da região. O objetivo é sempre unir estética e função, mantendo o bem-estar da paciente.",
+      },
+      {
+        q: "Como é a recuperação e em quanto tempo volto às atividades normais?",
+        a: "Atividades leves geralmente retornam em poucos dias, exercícios físicos e relações íntimas costumam ser liberados após cerca de 30 dias. O tempo exato varia de paciente para paciente. Converse com a Dra. Leila para orientações individualizadas.",
+      },
+      {
+        q: "As cicatrizes ficam visíveis?",
+        a: "As suturas são finas e feitas em locais estratégicos, ficando bastante discretas com o tempo. O cuidado no pós-operatório é fundamental para o melhor resultado.",
+      },
+      {
+        q: "Qual a diferença entre o laser íntimo e a cirurgia de ninfoplastia?",
+        a: "O laser íntimo é um procedimento não cirúrgico, indicado principalmente para tratar flacidez, ressecamento e rejuvenescimento da região. A ninfoplastia é uma cirurgia que remodela os pequenos lábios. Cada técnica tem indicações diferentes, definidas em consulta.",
+      },
+    ],
+  },
+  {
+    id: "menopausa",
+    label: "Menopausa",
+    items: [
+      {
+        q: "Como sei se estou entrando na menopausa?",
+        a: "Alterações no ciclo menstrual, ondas de calor, insônia, mudanças de humor e ressecamento vaginal costumam ser os primeiros sinais. Exames laboratoriais ajudam a confirmar. Converse com a Dra. Leila para uma avaliação completa.",
+      },
+      {
+        q: "A reposição hormonal é segura?",
+        a: "Quando bem indicada e acompanhada, a reposição hormonal moderna é segura e traz muitos benefícios para qualidade de vida, ossos e sono. A indicação é sempre individualizada, considerando histórico e exames de cada paciente.",
+      },
+      {
+        q: "Quais sintomas da menopausa merecem atenção médica?",
+        a: "Ondas de calor intensas, insônia persistente, alterações de humor, dor nas relações, ressecamento vaginal e sangramentos fora do padrão devem ser avaliados sem demora.",
+      },
+      {
+        q: "A menopausa afeta a libido e isso tem tratamento?",
+        a: "Sim, alterações hormonais e emocionais podem impactar a libido. Existem tratamentos eficazes, hormonais e não hormonais, além de cuidados com bem-estar geral. Converse com a Dra. Leila para uma abordagem personalizada.",
+      },
+      {
+        q: "Com que frequência devo consultar o ginecologista durante a menopausa?",
+        a: "Recomenda-se acompanhamento anual, ou em intervalos menores quando houver sintomas ativos ou tratamentos em curso. O acompanhamento próximo faz toda a diferença nessa fase.",
+      },
+    ],
+  },
 ];
 
 function useReveal() {
@@ -393,6 +520,104 @@ function Testimonials() {
   );
 }
 
+function FaqTrigger({ children }: { children: React.ReactNode }) {
+  return (
+    <AccordionPrimitive.Header className="flex">
+      <AccordionPrimitive.Trigger
+        className={cn(
+          "group flex flex-1 items-center justify-between gap-4 py-5 text-left font-serif text-lg md:text-xl text-foreground transition-colors hover:text-primary cursor-pointer",
+        )}
+      >
+        {children}
+        <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary/30 text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary group-data-[state=open]:bg-primary group-data-[state=open]:text-primary-foreground group-data-[state=open]:border-primary">
+          <Plus
+            size={18}
+            className="transition-transform duration-300 group-data-[state=open]:rotate-45"
+          />
+        </span>
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+  );
+}
+
+function Faq() {
+  return (
+    <section id="faq" className="py-20 md:py-28 bg-white">
+      <div className="container-narrow">
+        <Reveal>
+          <div className="text-center max-w-2xl mx-auto">
+            <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4">FAQ</div>
+            <h2 className="font-serif text-3xl md:text-5xl text-primary">
+              Tire suas dúvidas
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Reunimos as perguntas mais frequentes sobre nossos principais serviços. Se ficar
+              qualquer dúvida, fale conosco pelo WhatsApp.
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal delay={80}>
+          <div className="mt-12 max-w-3xl mx-auto">
+            <Tabs defaultValue={faqGroups[0].id} className="w-full">
+              <TabsList className="w-full h-auto flex flex-wrap justify-center gap-2 bg-transparent p-0 mb-8">
+                {faqGroups.map((g) => (
+                  <TabsTrigger
+                    key={g.id}
+                    value={g.id}
+                    className="rounded-full px-5 py-2 text-sm data-[state=active]:bg-primary data-[state=active]:text-primary-foreground border border-primary/20 data-[state=active]:border-primary transition-all"
+                  >
+                    {g.label}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+
+              {faqGroups.map((g) => (
+                <TabsContent key={g.id} value={g.id} className="mt-0">
+                  <Accordion type="single" collapsible className="w-full">
+                    {g.items.map((item, i) => (
+                      <AccordionItem
+                        key={item.q}
+                        value={`${g.id}-${i}`}
+                        className="border-b border-primary/15 last:border-b-0"
+                      >
+                        <FaqTrigger>{item.q}</FaqTrigger>
+                        <AccordionContent className="pb-6 pr-14 text-muted-foreground leading-relaxed">
+                          {item.a}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </TabsContent>
+              ))}
+            </Tabs>
+          </div>
+        </Reveal>
+
+        <Reveal delay={120}>
+          <div className="mt-14 text-center max-w-xl mx-auto rounded-2xl bg-[var(--blush)] border border-primary/15 p-8">
+            <h3 className="font-serif text-2xl text-primary">Ainda tem dúvidas?</h3>
+            <p className="mt-2 text-muted-foreground">
+              Fale diretamente com a nossa equipe pelo WhatsApp. Teremos prazer em ajudar você.
+            </p>
+            <Button asChild size="lg" className="mt-6 rounded-full px-8 h-12">
+              <a
+                href={waLink("Olá Dra. Leila, gostaria de tirar algumas dúvidas.")}
+                target="_blank"
+                rel="noopener"
+              >
+                <MessageCircle className="mr-2" size={18} />
+                Falar no WhatsApp
+              </a>
+            </Button>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+
 function Contact() {
   return (
     <section id="contato" className="py-20 md:py-28 bg-primary text-primary-foreground">
@@ -544,7 +769,9 @@ function LandingPage() {
         <Services />
         <Differentials />
         <Testimonials />
+        <Faq />
         <Contact />
+
       </main>
       <Footer />
       <FloatingWhatsApp />
