@@ -20,6 +20,8 @@ import {
   Star,
   ImageIcon,
   Plus,
+  Zap,
+  Camera,
 } from "lucide-react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { Button } from "@/components/ui/button";
