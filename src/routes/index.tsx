@@ -31,6 +31,7 @@ import { Accordion, AccordionItem, AccordionContent } from "@/components/ui/acco
 import { cn } from "@/lib/utils";
 import whatsappIcon from "@/assets/whatsapp-icon.png.asset.json";
 import draLeilaHero from "@/assets/dra-leila-hero.webp.asset.json";
+import draLeilaAbout from "@/assets/dra-leila-about.webp.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -332,9 +333,13 @@ function About() {
     <section id="sobre" className="py-20 md:py-28 bg-white">
       <div className="container-narrow grid md:grid-cols-2 gap-16 items-center">
         <Reveal>
-          <div className="aspect-square w-full rounded-2xl bg-[var(--blush)] border border-primary/15 flex flex-col items-center justify-center text-primary/60 shadow-soft">
-            <ImageIcon size={40} strokeWidth={1.5} />
-            <span className="mt-3 text-xs uppercase tracking-[0.25em]">Foto secundária</span>
+          <div className="aspect-square w-full rounded-2xl overflow-hidden bg-[var(--blush)] border border-primary/15 shadow-soft">
+            <img
+              src={draLeilaAbout.url}
+              alt="Dra. Leila Lopes"
+              className="w-full h-full object-cover object-center"
+              loading="lazy"
+            />
           </div>
         </Reveal>
 
