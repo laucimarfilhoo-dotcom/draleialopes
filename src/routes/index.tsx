@@ -320,15 +320,21 @@ function Differentials() {
 
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {differentials.map((d, i) => (
-            <Reveal key={d.title} delay={i * 80}>
-              <div className="border-t border-primary pt-6">
-                <d.icon className="text-primary" size={28} />
-                <h3 className="font-serif text-xl text-foreground mt-4">{d.title}</h3>
+            <Reveal key={d.title} delay={i * 120}>
+              <div className="group relative border-t border-primary pt-6 transition-all duration-500 hover:border-t-[3px] hover:-translate-y-2 cursor-default">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/5 text-primary transition-all duration-500 group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 group-hover:-rotate-6 group-hover:shadow-elegant">
+                  <d.icon size={24} className="transition-transform duration-500 group-hover:scale-110" />
+                </div>
+                <h3 className="font-serif text-xl text-foreground mt-4 transition-colors duration-300 group-hover:text-primary">
+                  {d.title}
+                </h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{d.desc}</p>
+                <div className="mt-4 h-px w-0 bg-primary transition-all duration-500 group-hover:w-full" />
               </div>
             </Reveal>
           ))}
         </div>
+
       </div>
     </section>
   );
