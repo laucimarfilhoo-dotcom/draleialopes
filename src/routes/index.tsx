@@ -436,7 +436,7 @@ const services = [
 
 function Services() {
   return (
-    <section id="servicos" className="py-20 md:py-28 bg-[oklch(0.93_0.035_15)]">
+    <section id="servicos" className="py-20 md:py-28 bg-[oklch(0.94_0.02_75)]">
       <div className="container-narrow">
         <Reveal>
           <div className="text-center max-w-2xl mx-auto">
