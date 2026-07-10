@@ -19,18 +19,62 @@ import {
   Facebook,
   Star,
   ImageIcon,
+  Plus,
 } from "lucide-react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Accordion, AccordionItem, AccordionContent } from "@/components/ui/accordion";
+import { cn } from "@/lib/utils";
 import whatsappIcon from "@/assets/whatsapp-icon.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
   component: LandingPage,
-  head: () => ({
-    links: [{ rel: "canonical", href: "/" }],
-  }),
+  head: () => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          q: "A colocação do DIU dói?",
+          a: "A maioria das mulheres relata apenas um leve desconforto, semelhante a uma cólica menstrual, e o procedimento é rápido.",
+        },
+        {
+          q: "Quanto tempo dura o DIU?",
+          a: "Depende do modelo. O DIU de cobre pode durar até 10 anos, o hormonal de 5 a 8 anos, e o Implanon cerca de 3 anos.",
+        },
+        {
+          q: "Ninfoplastia é só estética ou também tem função de saúde?",
+          a: "Além do resultado estético, pode aliviar desconforto em atividades físicas, na intimidade e no uso de determinadas roupas.",
+        },
+        {
+          q: "Como sei se estou entrando na menopausa?",
+          a: "Alterações no ciclo, ondas de calor, insônia e ressecamento vaginal são sinais comuns. Exames laboratoriais ajudam a confirmar.",
+        },
+        {
+          q: "A reposição hormonal é segura?",
+          a: "Quando bem indicada e acompanhada, a reposição hormonal moderna é segura e traz benefícios para qualidade de vida.",
+        },
+      ].map(({ q, a }) => ({
+        "@type": "Question",
+        name: q,
+        acceptedAnswer: { "@type": "Answer", text: a },
+      })),
+    };
+    return {
+      links: [{ rel: "canonical", href: "/" }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(faqSchema),
+        },
+      ],
+    };
+  },
 });
+
 
 const WHATSAPP_NUMBER = "5585000000000"; // placeholder — substituir
 const waLink = (msg: string) =>
