@@ -345,16 +345,18 @@ function About() {
   return (
     <section id="sobre" className="pt-6 md:pt-16 pb-20 md:pb-28 bg-white">
       <div className="container-narrow grid md:grid-cols-2 gap-16 items-center">
-        <Reveal>
-          <div className="hidden md:block aspect-square w-full rounded-2xl overflow-hidden bg-[var(--blush)] border border-primary/15 shadow-soft">
-            <img
-              src={draLeilaAbout.url}
-              alt="Dra. Leila Lopes"
-              className="w-full h-full object-cover object-center"
-              loading="lazy"
-            />
-          </div>
-        </Reveal>
+        <div className="hidden md:block">
+          <Reveal>
+            <div className="aspect-square w-full rounded-2xl overflow-hidden bg-[var(--blush)] border border-primary/15 shadow-soft">
+              <img
+                src={draLeilaAbout.url}
+                alt="Dra. Leila Lopes"
+                className="w-full h-full object-cover object-center"
+                loading="lazy"
+              />
+            </div>
+          </Reveal>
+        </div>
 
         <Reveal delay={100}>
           <div>
