@@ -215,7 +215,7 @@ function About() {
             <p className="mt-6 text-muted-foreground leading-relaxed">
               Formada em Medicina com especialização em Ginecologia e Obstetrícia, a Dra. Leila
               Lopes acumula 25 anos de prática clínica em Fortaleza. Sua abordagem une o rigor
-              técnico da medicina baseada em evidências ao cuidado humanizado — porque cada
+              técnico da medicina baseada em evidências ao cuidado humanizado, porque cada
               mulher merece ser ouvida por inteiro.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
