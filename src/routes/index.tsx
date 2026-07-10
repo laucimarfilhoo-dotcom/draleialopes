@@ -270,8 +270,8 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
-      <div className="container-narrow grid md:grid-cols-2 gap-12 md:gap-16 items-center pt-16 md:pt-28 pb-10 md:pb-16">
+    <section id="top" className="relative overflow-hidden h-auto min-h-0">
+      <div className="container-narrow grid md:grid-cols-2 gap-12 md:gap-16 items-center pt-16 md:pt-28 pb-6 md:pb-16 min-h-0">
         <Reveal>
           <div>
             <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-primary mb-6">
