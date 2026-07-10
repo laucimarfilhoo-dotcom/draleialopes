@@ -206,11 +206,11 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-border shadow-[0_1px_10px_-6px_rgba(0,0,0,0.1)]">
+    <header className="sticky top-0 z-40 bg-primary/95 backdrop-blur border-b border-primary-hover/40 shadow-[0_1px_10px_-6px_rgba(0,0,0,0.3)]">
       <div className="container-narrow flex items-center justify-between h-18 py-4">
         <a href="#top" className="flex flex-col leading-tight">
-          <span className="font-serif text-2xl text-primary tracking-tight">Dra. Leila Lopes</span>
-          <span className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+          <span className="font-serif text-2xl text-primary-foreground tracking-tight">Dra. Leila Lopes</span>
+          <span className="text-[11px] uppercase tracking-[0.2em] text-primary-foreground/70">
             Ginecologia · Estética Íntima
           </span>
         </a>
@@ -220,12 +220,12 @@ function Header() {
             <a
               key={n.href}
               href={n.href}
-              className="text-sm text-foreground/80 hover:text-primary transition-colors"
+              className="text-sm text-primary-foreground/85 hover:text-primary-foreground transition-colors"
             >
               {n.label}
             </a>
           ))}
-          <Button asChild size="sm" className="rounded-full px-5">
+          <Button asChild size="sm" variant="secondary" className="rounded-full px-5 bg-primary-foreground text-primary hover:bg-primary-foreground/90">
             <a href={waLink("Olá Dra. Leila, gostaria de agendar uma consulta.")} target="_blank" rel="noopener">
               Agendar Consulta
             </a>
@@ -233,7 +233,7 @@ function Header() {
         </nav>
 
         <button
-          className="md:hidden text-primary"
+          className="md:hidden text-primary-foreground"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
@@ -242,19 +242,19 @@ function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-border bg-white">
+        <div className="md:hidden border-t border-primary-hover/40 bg-primary">
           <div className="container-narrow py-4 flex flex-col gap-4">
             {navItems.map((n) => (
               <a
                 key={n.href}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                className="text-sm text-foreground/80 hover:text-primary"
+                className="text-sm text-primary-foreground/85 hover:text-primary-foreground"
               >
                 {n.label}
               </a>
             ))}
-            <Button asChild size="sm" className="rounded-full">
+            <Button asChild size="sm" className="rounded-full bg-primary-foreground text-primary hover:bg-primary-foreground/90">
               <a href={waLink("Olá Dra. Leila, gostaria de agendar uma consulta.")} target="_blank" rel="noopener">
                 Agendar Consulta
               </a>
