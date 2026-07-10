@@ -20,6 +20,8 @@ import {
   Star,
   ImageIcon,
   Plus,
+  Zap,
+  Camera,
 } from "lucide-react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { Button } from "@/components/ui/button";
@@ -372,19 +374,34 @@ function About() {
 
 const services = [
   {
-    icon: HeartPulse,
-    title: "DIU e Implanon",
-    desc: "Inserção e acompanhamento de métodos contraceptivos de longa duração, com técnica precisa e conforto no procedimento.",
+    icon: Stethoscope,
+    title: "Ginecologia Geral",
+    desc: "Acompanhamento ginecológico completo, com consultas de rotina, prevenção e cuidado com a saúde da mulher em todas as fases da vida.",
+  },
+  {
+    icon: Zap,
+    title: "Laser e Radiofrequência",
+    desc: "Tratamentos não invasivos para saúde e bem-estar íntimo, indicados para rejuvenescimento vaginal, ressecamento e outras queixas comuns.",
   },
   {
     icon: Sparkles,
-    title: "Laser e Ninfoplastia",
-    desc: "Estética íntima com tecnologia de laser e procedimentos cirúrgicos delicados para bem-estar, saúde e autoestima.",
+    title: "Ninfoplastia",
+    desc: "Procedimento cirúrgico para correção estética e funcional dos pequenos lábios, realizado com técnica cuidadosa e foco na recuperação tranquila.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "DIU e Implanon",
+    desc: "Colocação e acompanhamento de métodos contraceptivos de longa duração, com orientação individualizada sobre a melhor opção para cada paciente.",
   },
   {
     icon: Flower2,
-    title: "Menopausa",
-    desc: "Cuidado individualizado nesta fase de transição, com reposição hormonal moderna, orientação e escuta ativa.",
+    title: "Estética Íntima",
+    desc: "Cuidados estéticos voltados para a saúde e autoestima da região íntima, com procedimentos seguros e atendimento acolhedor.",
+  },
+  {
+    icon: Camera,
+    title: "Videohisteroscopia",
+    desc: "Exame que permite visualizar o interior do útero através de uma câmera, indicado para investigar sangramentos, pólipos e outras alterações uterinas.",
   },
 ];
 
