@@ -270,8 +270,8 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
-      <div className="container-narrow grid md:grid-cols-2 gap-12 md:gap-16 items-center pt-16 md:pt-28 pb-10 md:pb-16">
+    <section id="top" className="relative overflow-hidden h-auto min-h-0">
+      <div className="container-narrow grid md:grid-cols-2 gap-12 md:gap-16 items-center pt-16 md:pt-28 pb-6 md:pb-16 min-h-0">
         <Reveal>
           <div>
             <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-primary mb-6">
@@ -343,18 +343,20 @@ function Hero() {
 
 function About() {
   return (
-    <section id="sobre" className="pt-10 md:pt-16 pb-20 md:pb-28 bg-white">
+    <section id="sobre" className="pt-6 md:pt-16 pb-20 md:pb-28 bg-white">
       <div className="container-narrow grid md:grid-cols-2 gap-16 items-center">
-        <Reveal>
-          <div className="hidden md:block aspect-square w-full rounded-2xl overflow-hidden bg-[var(--blush)] border border-primary/15 shadow-soft">
-            <img
-              src={draLeilaAbout.url}
-              alt="Dra. Leila Lopes"
-              className="w-full h-full object-cover object-center"
-              loading="lazy"
-            />
-          </div>
-        </Reveal>
+        <div className="hidden md:block">
+          <Reveal>
+            <div className="aspect-square w-full rounded-2xl overflow-hidden bg-[var(--blush)] border border-primary/15 shadow-soft">
+              <img
+                src={draLeilaAbout.url}
+                alt="Dra. Leila Lopes"
+                className="w-full h-full object-cover object-center"
+                loading="lazy"
+              />
+            </div>
+          </Reveal>
+        </div>
 
         <Reveal delay={100}>
           <div>
