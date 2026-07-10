@@ -32,7 +32,7 @@ import { cn } from "@/lib/utils";
 import whatsappIcon from "@/assets/whatsapp-icon.png.asset.json";
 import draLeilaHero from "@/assets/dra-leila-hero.webp.asset.json";
 import draLeilaAbout from "@/assets/dra-leila-about.webp.asset.json";
-import logoLeila from "@/assets/logo-leila-lopes.png.asset.json";
+import logoLeila from "@/assets/logo-leila-menu.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
