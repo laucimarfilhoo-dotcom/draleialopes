@@ -94,12 +94,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Dra. Leila Lopes | Ginecologista em Fortaleza" },
       { name: "twitter:description", content: "Dra. Leila Lopes, ginecologista em Fortaleza, CE. 25 anos de experiência em ginecologia e estética íntima com atendimento humanizado. CRM 6968 · RQE 3081." },
-      { property: "og:image", content: "https://draleialopes.lovable.app/__l5e/assets-v1/c8e2fd87-8471-4081-a5bb-a2cb5966fed9/logo-leila-lopes.png" },
-      { name: "twitter:image", content: "https://draleialopes.lovable.app/__l5e/assets-v1/c8e2fd87-8471-4081-a5bb-a2cb5966fed9/logo-leila-lopes.png" },
+      { property: "og:image", content: "/images/logo-leila-lopes.png" },
+      { name: "twitter:image", content: "/images/logo-leila-lopes.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/png", href: "/__l5e/assets-v1/c8e2fd87-8471-4081-a5bb-a2cb5966fed9/logo-leila-lopes.png" },
+      { rel: "icon", type: "image/png", href: "/images/logo-leila-lopes.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
