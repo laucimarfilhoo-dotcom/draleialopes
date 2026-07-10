@@ -180,15 +180,13 @@ function Hero() {
         <Reveal delay={150}>
           <div className="relative">
             <div className="absolute -inset-4 md:-inset-6 border border-primary/30 rounded-[2rem] -rotate-2" />
-            <img
-              src={heroImg}
-              alt="Dra. Leila Lopes — ginecologista em Fortaleza"
-              width={1024}
-              height={1280}
-              className="relative w-full h-auto rounded-[1.75rem] object-cover shadow-elegant"
-            />
+            <div className="relative aspect-[4/5] w-full rounded-[1.75rem] bg-[var(--blush)] border border-primary/15 flex flex-col items-center justify-center text-primary/60 shadow-elegant">
+              <ImageIcon size={40} strokeWidth={1.5} />
+              <span className="mt-3 text-xs uppercase tracking-[0.25em]">Foto da Dra. Leila</span>
+            </div>
           </div>
         </Reveal>
+
       </div>
     </section>
   );
