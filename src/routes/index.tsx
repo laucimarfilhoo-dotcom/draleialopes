@@ -84,7 +84,7 @@ const navItems = [
   { label: "Sobre", href: "#sobre" },
   { label: "Serviços", href: "#servicos" },
   { label: "Diferenciais", href: "#diferenciais" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Dúvidas", href: "#faq" },
   { label: "Contato", href: "#contato" },
 ];
 
@@ -546,7 +546,7 @@ function Faq() {
       <div className="container-narrow">
         <Reveal>
           <div className="text-center max-w-2xl mx-auto">
-            <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4">FAQ</div>
+            <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4">Dúvidas</div>
             <h2 className="font-serif text-3xl md:text-5xl text-primary">
               Tire suas dúvidas
             </h2>
