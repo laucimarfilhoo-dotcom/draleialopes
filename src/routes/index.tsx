@@ -271,7 +271,7 @@ function Services() {
               Cuidados especializados em cada etapa
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Um portfólio focado em ginecologia moderna e estética íntima — pensado para
+              Um portfólio focado em ginecologia moderna e estética íntima, pensado para
               atender a mulher de forma completa.
             </p>
           </div>
