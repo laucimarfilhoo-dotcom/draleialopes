@@ -396,7 +396,7 @@ function Testimonials() {
 function Contact() {
   return (
     <section id="contato" className="py-20 md:py-28 bg-primary text-primary-foreground">
-      <div className="container-narrow grid md:grid-cols-2 gap-14">
+      <div className="container-narrow grid md:grid-cols-2 gap-14 items-start">
         <Reveal>
           <div>
             <div className="text-xs uppercase tracking-[0.25em] text-primary-foreground/70 mb-4">
@@ -407,7 +407,7 @@ function Contact() {
             </h2>
             <p className="mt-4 text-primary-foreground/80 leading-relaxed max-w-md">
               Nosso consultório é um espaço pensado para o seu conforto. Agende sua consulta
-              ou envie uma mensagem — respondemos com brevidade.
+              pelo WhatsApp — respondemos com brevidade.
             </p>
 
             <div className="mt-8 space-y-5">
@@ -445,50 +445,24 @@ function Contact() {
               </div>
             </div>
 
-            <div className="mt-8 rounded-2xl overflow-hidden border border-white/20">
-              <iframe
-                title="Localização do consultório"
-                src="https://www.google.com/maps?q=Aldeota,Fortaleza,CE&output=embed"
-                className="w-full h-56 grayscale"
-                loading="lazy"
-              />
-            </div>
+            <Button asChild size="lg" className="mt-8 rounded-full px-8 h-12 bg-white text-primary hover:bg-white/90">
+              <a href={waLink("Olá Dra. Leila, gostaria de agendar uma consulta.")} target="_blank" rel="noopener">
+                <MessageCircle className="mr-2" size={18} />
+                Agendar pelo WhatsApp
+              </a>
+            </Button>
           </div>
         </Reveal>
 
         <Reveal delay={100}>
-          <form
-            className="bg-white text-foreground rounded-2xl p-8 shadow-elegant"
-            onSubmit={(e) => {
-              e.preventDefault();
-              const fd = new FormData(e.currentTarget);
-              const msg = `Olá Dra. Leila! Meu nome é ${fd.get("nome")}. ${fd.get("mensagem")}`;
-              window.open(waLink(msg), "_blank");
-            }}
-          >
-            <h3 className="font-serif text-2xl text-primary">Envie uma mensagem</h3>
-            <p className="text-sm text-muted-foreground mt-1">
-              Preencha o formulário — sem informações de saúde sensíveis.
-            </p>
-
-            <div className="mt-6 space-y-4">
-              <div>
-                <label className="text-sm font-medium text-foreground" htmlFor="nome">Nome</label>
-                <Input id="nome" name="nome" required placeholder="Seu nome" className="mt-1.5" />
-              </div>
-              <div>
-                <label className="text-sm font-medium text-foreground" htmlFor="email">E-mail</label>
-                <Input id="email" name="email" type="email" required placeholder="voce@email.com" className="mt-1.5" />
-              </div>
-              <div>
-                <label className="text-sm font-medium text-foreground" htmlFor="mensagem">Mensagem</label>
-                <Textarea id="mensagem" name="mensagem" required rows={4} placeholder="Como posso ajudar?" className="mt-1.5" />
-              </div>
-              <Button type="submit" size="lg" className="w-full rounded-full h-12">
-                Enviar pelo WhatsApp
-              </Button>
-            </div>
-          </form>
+          <div className="rounded-2xl overflow-hidden border border-white/20 shadow-elegant">
+            <iframe
+              title="Localização do consultório"
+              src="https://www.google.com/maps?q=Aldeota,Fortaleza,CE&output=embed"
+              className="w-full h-[420px] md:h-[520px] grayscale"
+              loading="lazy"
+            />
+          </div>
         </Reveal>
       </div>
     </section>
