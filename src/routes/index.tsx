@@ -321,7 +321,7 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={150}>
-          <div className="relative">
+          <div className="relative hidden md:block">
             <div className="absolute -inset-4 md:-inset-6 border border-primary/30 rounded-[2rem] -rotate-2" />
             <div className="relative aspect-[4/5] w-full rounded-[1.75rem] overflow-hidden bg-[var(--blush)] border border-primary/15 shadow-elegant">
               <img
