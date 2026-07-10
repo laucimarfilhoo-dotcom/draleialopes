@@ -197,15 +197,12 @@ function About() {
     <section id="sobre" className="py-20 md:py-28 bg-white">
       <div className="container-narrow grid md:grid-cols-2 gap-16 items-center">
         <Reveal>
-          <img
-            src={aboutImg}
-            alt="Dra. Leila em consulta"
-            width={1024}
-            height={1024}
-            loading="lazy"
-            className="w-full h-auto rounded-2xl object-cover shadow-soft"
-          />
+          <div className="aspect-square w-full rounded-2xl bg-[var(--blush)] border border-primary/15 flex flex-col items-center justify-center text-primary/60 shadow-soft">
+            <ImageIcon size={40} strokeWidth={1.5} />
+            <span className="mt-3 text-xs uppercase tracking-[0.25em]">Foto secundária</span>
+          </div>
         </Reveal>
+
         <Reveal delay={100}>
           <div>
             <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4 flex items-center gap-3">
