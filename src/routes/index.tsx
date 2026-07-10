@@ -687,7 +687,7 @@ function Contact() {
                 <div>
                   <div className="font-medium">Endereço</div>
                   <div className="text-primary-foreground/80 text-sm">
-                    Av. Santos Dumont, 0000 · Aldeota · Fortaleza, CE
+                    Rua Chico Lemos, 566 · Cidade dos Funcionários · Fortaleza, CE
                   </div>
                 </div>
               </div>
@@ -729,7 +729,7 @@ function Contact() {
           <div className="rounded-2xl overflow-hidden border border-white/20 shadow-elegant">
             <iframe
               title="Localização do consultório"
-              src="https://www.google.com/maps?q=Aldeota,Fortaleza,CE&output=embed"
+              src="https://www.google.com/maps?q=Rua+Chico+Lemos+566+Cidade+dos+Funcionarios+Fortaleza+CE&output=embed"
               className="w-full h-[420px] md:h-[520px] grayscale"
               loading="lazy"
             />
@@ -765,7 +765,7 @@ function Footer() {
           <div className="text-sm font-medium">Contato</div>
           <ul className="mt-3 space-y-2 text-sm text-white/70">
             <li className="flex items-center gap-2"><Mail size={14} /> contato@draleilalopes.com.br</li>
-            <li className="flex items-center gap-2"><MapPin size={14} /> Fortaleza, CE</li>
+            <li className="flex items-center gap-2"><MapPin size={14} /> Rua Chico Lemos, 566 · Cidade dos Funcionários · Fortaleza, CE</li>
           </ul>
           <div className="flex gap-3 mt-4">
             <a href="#" aria-label="Instagram" className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
