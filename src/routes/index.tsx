@@ -514,9 +514,15 @@ function FloatingWhatsApp() {
       target="_blank"
       rel="noopener"
       aria-label="Falar no WhatsApp"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-elegant hover:scale-105 transition-transform"
+      className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full shadow-elegant hover:scale-105 transition-transform"
     >
-      <MessageCircle size={26} />
+      <img
+        src={whatsappIcon.url}
+        alt="WhatsApp"
+        width={64}
+        height={64}
+        className="w-full h-full object-contain drop-shadow-md"
+      />
     </a>
   );
 }
