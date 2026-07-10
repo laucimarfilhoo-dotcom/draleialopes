@@ -769,7 +769,9 @@ function LandingPage() {
         <Services />
         <Differentials />
         <Testimonials />
+        <Faq />
         <Contact />
+
       </main>
       <Footer />
       <FloatingWhatsApp />
