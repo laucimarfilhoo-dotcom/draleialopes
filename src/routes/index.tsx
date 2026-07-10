@@ -21,8 +21,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import heroImg from "@/assets/dra-leila-hero.jpg";
 import aboutImg from "@/assets/dra-leila-about.jpg";
 
