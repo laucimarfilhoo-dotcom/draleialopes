@@ -149,7 +149,7 @@ function Hero() {
               <span className="text-primary italic">delicadeza</span> e experiência.
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-lg leading-relaxed">
-              Há 25 anos acolhendo mulheres em cada fase da vida — com escuta atenta,
+              Há 25 anos acolhendo mulheres em cada fase da vida, com escuta atenta,
               ciência atualizada e um olhar dedicado à ginecologia e à estética íntima.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
@@ -215,7 +215,7 @@ function About() {
             <p className="mt-6 text-muted-foreground leading-relaxed">
               Formada em Medicina com especialização em Ginecologia e Obstetrícia, a Dra. Leila
               Lopes acumula 25 anos de prática clínica em Fortaleza. Sua abordagem une o rigor
-              técnico da medicina baseada em evidências ao cuidado humanizado — porque cada
+              técnico da medicina baseada em evidências ao cuidado humanizado, porque cada
               mulher merece ser ouvida por inteiro.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
@@ -271,7 +271,7 @@ function Services() {
               Cuidados especializados em cada etapa
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Um portfólio focado em ginecologia moderna e estética íntima — pensado para
+              Um portfólio focado em ginecologia moderna e estética íntima, pensado para
               atender a mulher de forma completa.
             </p>
           </div>
@@ -400,7 +400,7 @@ function Contact() {
             </h2>
             <p className="mt-4 text-primary-foreground/80 leading-relaxed max-w-md">
               Nosso consultório é um espaço pensado para o seu conforto. Agende sua consulta
-              pelo WhatsApp — respondemos com brevidade.
+              pelo WhatsApp. Respondemos com brevidade.
             </p>
 
             <div className="mt-8 space-y-5">
@@ -409,7 +409,7 @@ function Contact() {
                 <div>
                   <div className="font-medium">Endereço</div>
                   <div className="text-primary-foreground/80 text-sm">
-                    Av. Santos Dumont, 0000 · Aldeota · Fortaleza — CE
+                    Av. Santos Dumont, 0000 · Aldeota · Fortaleza, CE
                   </div>
                 </div>
               </div>
@@ -487,7 +487,7 @@ function Footer() {
           <div className="text-sm font-medium">Contato</div>
           <ul className="mt-3 space-y-2 text-sm text-white/70">
             <li className="flex items-center gap-2"><Mail size={14} /> contato@draleilalopes.com.br</li>
-            <li className="flex items-center gap-2"><MapPin size={14} /> Fortaleza — CE</li>
+            <li className="flex items-center gap-2"><MapPin size={14} /> Fortaleza, CE</li>
           </ul>
           <div className="flex gap-3 mt-4">
             <a href="#" aria-label="Instagram" className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
