@@ -30,6 +30,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Accordion, AccordionItem, AccordionContent } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 import whatsappIcon from "@/assets/whatsapp-icon.png.asset.json";
+import draLeilaHero from "@/assets/dra-leila-hero.webp.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -310,9 +311,13 @@ function Hero() {
         <Reveal delay={150}>
           <div className="relative">
             <div className="absolute -inset-4 md:-inset-6 border border-primary/30 rounded-[2rem] -rotate-2" />
-            <div className="relative aspect-[4/5] w-full rounded-[1.75rem] bg-[var(--blush)] border border-primary/15 flex flex-col items-center justify-center text-primary/60 shadow-elegant">
-              <ImageIcon size={40} strokeWidth={1.5} />
-              <span className="mt-3 text-xs uppercase tracking-[0.25em]">Foto da Dra. Leila</span>
+            <div className="relative aspect-[4/5] w-full rounded-[1.75rem] overflow-hidden bg-[var(--blush)] border border-primary/15 shadow-elegant">
+              <img
+                src={draLeilaHero.url}
+                alt="Dra. Leila Lopes"
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
             </div>
           </div>
         </Reveal>
