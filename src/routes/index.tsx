@@ -208,12 +208,12 @@ function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 bg-primary/95 backdrop-blur border-b border-primary-hover/40 shadow-[0_1px_10px_-6px_rgba(0,0,0,0.3)]">
-      <div className="container-narrow flex items-center justify-between h-18 py-4">
+      <div className="container-narrow flex items-center justify-between h-24 py-3">
         <a href="#top" className="flex items-center" aria-label="Dra. Leila Lopes - Ginecologia">
           <img
             src={logoLeila.url}
             alt="Dra. Leila Lopes - Ginecologia"
-            className="h-14 md:h-16 w-auto object-contain"
+            className="h-20 md:h-24 w-auto object-contain"
           />
         </a>
 
