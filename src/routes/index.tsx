@@ -280,6 +280,17 @@ function Hero() {
               Cuidado feminino com{" "}
               <span className="text-primary italic">delicadeza</span> e experiência.
             </h1>
+            <div className="relative mt-8 md:hidden">
+              <div className="absolute -inset-3 border border-primary/30 rounded-[2rem] -rotate-2" />
+              <div className="relative aspect-[4/5] w-full rounded-[1.75rem] overflow-hidden bg-[var(--blush)] border border-primary/15 shadow-elegant">
+                <img
+                  src={draLeilaHero.url}
+                  alt="Dra. Leila Lopes"
+                  className="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+            </div>
             <p className="mt-6 text-lg text-muted-foreground max-w-lg leading-relaxed">
               Há 25 anos acolhendo mulheres em cada fase da vida, com escuta atenta,
               ciência atualizada e um olhar dedicado à ginecologia e à estética íntima.
@@ -310,7 +321,7 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={150}>
-          <div className="relative">
+          <div className="relative hidden md:block">
             <div className="absolute -inset-4 md:-inset-6 border border-primary/30 rounded-[2rem] -rotate-2" />
             <div className="relative aspect-[4/5] w-full rounded-[1.75rem] overflow-hidden bg-[var(--blush)] border border-primary/15 shadow-elegant">
               <img
