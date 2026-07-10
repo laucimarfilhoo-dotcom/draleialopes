@@ -487,7 +487,7 @@ function Footer() {
           <div className="text-sm font-medium">Contato</div>
           <ul className="mt-3 space-y-2 text-sm text-white/70">
             <li className="flex items-center gap-2"><Mail size={14} /> contato@draleilalopes.com.br</li>
-            <li className="flex items-center gap-2"><MapPin size={14} /> Fortaleza — CE</li>
+            <li className="flex items-center gap-2"><MapPin size={14} /> Fortaleza, CE</li>
           </ul>
           <div className="flex gap-3 mt-4">
             <a href="#" aria-label="Instagram" className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-primary transition-colors">
