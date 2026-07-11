@@ -195,7 +195,7 @@ const faqGroups: { id: string; label: string; items: FaqItem[] }[] = [
       },
       {
         q: "O laser íntimo é seguro?",
-        a: "Sim, quando realizado por profissional qualificado e com equipamento adequado, o laser íntimo é seguro. A Dra. Leila avalia cada paciente para indicar a melra tecnologia e o número de sessões ideais.",
+        a: "Sim, quando realizado por profissional qualificado e com equipamento adequado, o laser íntimo é seguro. A Dra. Leila avalia cada paciente para indicar a melhor tecnologia e o número de sessões ideais.",
       },
       {
         q: "Quantas sessões de laser são necessárias?",
