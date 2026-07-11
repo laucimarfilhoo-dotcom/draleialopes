@@ -56,7 +56,15 @@ export const Route = createFileRoute("/")({
         },
         {
           q: "Ninfoplastia é só estética ou também tem função de saúde?",
-          a: "Além do resultado estético, pode aliviar desconforto em atividades físicas, na intimidade e no uso de determinadas roupas.",
+          a: "Além do resultado estético, a ninfoplastia pode aliviar desconforto em atividades físicas, na intimidade e no uso de determinadas roupas.",
+        },
+        {
+          q: "Para que serve o laser íntimo?",
+          a: "O laser íntimo é indicado para tratar flacidez, ressecamento, perda de tônus e promover o rejuvenescimento da regi íntima, de forma não cirúrgica.",
+        },
+        {
+          q: "A radiofrequência íntima é invasiva?",
+          a: "Não. A radiofrequência íntima é um procedimento não invasivo que estimula o colágeno e melhora o tônus e a lubrificação da região.",
         },
         {
           q: "Como sei se estou entrando na menopausa?",
