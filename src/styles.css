@@ -30,6 +30,7 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-blush: var(--blush);
+  --color-beige: var(--beige);
   --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --shadow-elegant: 0 10px 40px -12px color-mix(in oklab, var(--primary) 25%, transparent);
@@ -58,6 +59,7 @@
   --accent-foreground: oklch(0.32 0.09 15);
 
   --blush: oklch(0.97 0.018 15);            /* #FBF0F2 */
+  --beige: oklch(0.96 0.015 55);             /* #F5F0E6 */
 
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.22 0.008 20);
