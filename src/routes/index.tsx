@@ -268,62 +268,11 @@ function Header() {
   );
 }
 
-function HeroDots() {
-  const desktopDots = [
-    { left: "4%", top: "14%", size: 7, delay: 0, duration: 6.2 },
-    { left: "14%", top: "30%", size: 5, delay: 1.2, duration: 5.4 },
-    { left: "22%", top: "8%", size: 5, delay: 0.4, duration: 6.8 },
-    { left: "34%", top: "42%", size: 4, delay: 2.1, duration: 5.0 },
-    { left: "8%", top: "58%", size: 6, delay: 0.8, duration: 5.6 },
-    { left: "28%", top: "68%", size: 4, delay: 1.6, duration: 6.4 },
-    { left: "40%", top: "22%", size: 5, delay: 2.8, duration: 5.8 },
-    { left: "18%", top: "82%", size: 4, delay: 3.0, duration: 4.8 },
-    { left: "46%", top: "62%", size: 4, delay: 1.0, duration: 5.2 },
-  ];
-
-  const mobileDots = [
-    { left: "8%", top: "8%", size: 5, delay: 0, duration: 6.0 },
-    { left: "24%", top: "10%", size: 4, delay: 1.0, duration: 5.2 },
-    { left: "78%", top: "9%", size: 5, delay: 0.5, duration: 6.4 },
-    { left: "92%", top: "14%", size: 3, delay: 1.8, duration: 5.6 },
-    { left: "6%", top: "16%", size: 4, delay: 2.2, duration: 6.8 },
-    { left: "88%", top: "7%", size: 5, delay: 0.3, duration: 5.0 },
-    { left: "42%", top: "12%", size: 3, delay: 1.4, duration: 5.8 },
-  ];
-
-  const renderDots = (dots: typeof desktopDots) =>
-    dots.map((dot, i) => (
-      <span
-        key={i}
-        className="absolute rounded-full bg-primary animate-dot-float"
-        style={{
-          left: dot.left,
-          top: dot.top,
-          width: dot.size,
-          height: dot.size,
-          animationDelay: `${dot.delay}s`,
-          animationDuration: `${dot.duration}s`,
-        }}
-      />
-    ));
-
-  return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-      <div className="hidden md:block absolute inset-0">
-        {renderDots(desktopDots)}
-      </div>
-      <div className="md:hidden absolute inset-0">
-        {renderDots(mobileDots)}
-      </div>
-    </div>
-  );
-}
 
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden h-auto min-h-0">
-      <HeroDots />
-      <div className="relative z-10 container-narrow grid md:grid-cols-2 gap-12 md:gap-16 items-center pt-16 md:pt-28 pb-6 md:pb-16 min-h-0">
+    <section id="top" className="overflow-hidden h-auto min-h-0">
+      <div className="container-narrow grid md:grid-cols-2 gap-12 md:gap-16 items-center pt-16 md:pt-28 pb-6 md:pb-16 min-h-0">
         <Reveal>
           <div>
             <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-primary mb-6">
