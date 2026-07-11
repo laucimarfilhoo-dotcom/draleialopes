@@ -645,7 +645,7 @@ function Faq() {
         </Reveal>
 
         <Reveal delay={120}>
-          <div className="mt-14 text-center max-w-xl mx-auto rounded-2xl bg-[var(--blush)] border border-primary/15 p-8">
+          <div className="mt-14 text-center max-w-xl mx-auto rounded-2xl bg-[var(--beige)] border border-primary/15 p-8">
             <h3 className="font-serif text-2xl text-primary">Ainda tem dúvidas?</h3>
             <p className="mt-2 text-muted-foreground">
               Fale diretamente com a nossa equipe pelo WhatsApp. Teremos prazer em ajudar você.
