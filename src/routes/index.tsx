@@ -270,23 +270,25 @@ function Header() {
 
 function HeroDots() {
   const desktopDots = [
-    { left: "4%", top: "14%", size: 8, delay: 0, duration: 6.2 },
+    { left: "4%", top: "14%", size: 7, delay: 0, duration: 6.2 },
     { left: "14%", top: "30%", size: 5, delay: 1.2, duration: 5.4 },
-    { left: "22%", top: "8%", size: 6, delay: 0.4, duration: 6.8 },
+    { left: "22%", top: "8%", size: 5, delay: 0.4, duration: 6.8 },
     { left: "34%", top: "42%", size: 4, delay: 2.1, duration: 5.0 },
-    { left: "8%", top: "58%", size: 7, delay: 0.8, duration: 5.6 },
-    { left: "28%", top: "68%", size: 5, delay: 1.6, duration: 6.4 },
-    { left: "42%", top: "22%", size: 6, delay: 2.8, duration: 5.8 },
+    { left: "8%", top: "58%", size: 6, delay: 0.8, duration: 5.6 },
+    { left: "28%", top: "68%", size: 4, delay: 1.6, duration: 6.4 },
+    { left: "40%", top: "22%", size: 5, delay: 2.8, duration: 5.8 },
     { left: "18%", top: "82%", size: 4, delay: 3.0, duration: 4.8 },
+    { left: "46%", top: "62%", size: 4, delay: 1.0, duration: 5.2 },
   ];
 
   const mobileDots = [
-    { left: "8%", top: "8%", size: 6, delay: 0, duration: 6.0 },
-    { left: "22%", top: "12%", size: 4, delay: 1.0, duration: 5.2 },
-    { left: "78%", top: "10%", size: 5, delay: 0.5, duration: 6.4 },
-    { left: "92%", top: "18%", size: 4, delay: 1.8, duration: 5.6 },
-    { left: "6%", top: "20%", size: 5, delay: 2.2, duration: 6.8 },
-    { left: "88%", top: "8%", size: 6, delay: 0.3, duration: 5.0 },
+    { left: "8%", top: "8%", size: 5, delay: 0, duration: 6.0 },
+    { left: "24%", top: "10%", size: 4, delay: 1.0, duration: 5.2 },
+    { left: "78%", top: "9%", size: 5, delay: 0.5, duration: 6.4 },
+    { left: "92%", top: "14%", size: 3, delay: 1.8, duration: 5.6 },
+    { left: "6%", top: "16%", size: 4, delay: 2.2, duration: 6.8 },
+    { left: "88%", top: "7%", size: 5, delay: 0.3, duration: 5.0 },
+    { left: "42%", top: "12%", size: 3, delay: 1.4, duration: 5.8 },
   ];
 
   const renderDots = (dots: typeof desktopDots) =>
@@ -307,10 +309,10 @@ function HeroDots() {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-      <div className="hidden md:block absolute inset-0 [mask-image:linear-gradient(to_right,black_45%,transparent_80%)] [-webkit-mask-image:linear-gradient(to_right,black_45%,transparent_80%)]">
+      <div className="hidden md:block absolute inset-0">
         {renderDots(desktopDots)}
       </div>
-      <div className="md:hidden absolute inset-0 [mask-image:linear-gradient(to_bottom,black_22%,transparent_48%)] [-webkit-mask-image:linear-gradient(to_bottom,black_22%,transparent_48%)]">
+      <div className="md:hidden absolute inset-0">
         {renderDots(mobileDots)}
       </div>
     </div>
