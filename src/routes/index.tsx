@@ -44,11 +44,15 @@ export const Route = createFileRoute("/")({
       mainEntity: [
         {
           q: "A colocação do DIU dói?",
-          a: "A maioria das mulheres relata apenas um leve desconforto, semelhante a uma cólica menstrual, e o procedimento é rápido.",
+          a: "A maioria das mulheres relata apenas um leve desconforto, semelhante a uma cólica menstrual, e o procedimento é rápido. Para quem prefere, a colocação também pode ser feita com sedação anestésica, sem dor.",
         },
         {
           q: "Quanto tempo dura o DIU?",
-          a: "Depende do modelo. O DIU de cobre pode durar até 10 anos, o hormonal de 5 a 8 anos, e o Implanon cerca de 3 anos.",
+          a: "Depende do modelo. O DIU de cobre pode durar até 10 anos e o hormonal costuma durar de 5 a 8 anos.",
+        },
+        {
+          q: "Quanto tempo dura o Implanon?",
+          a: "O Implanon (implante hormonal subcutâneo) tem duração de cerca de 3 anos.",
         },
         {
           q: "Ninfoplastia é só estética ou também tem função de saúde?",
@@ -97,15 +101,15 @@ type FaqItem = { q: string; a: string };
 const faqGroups: { id: string; label: string; items: FaqItem[] }[] = [
   {
     id: "diu",
-    label: "DIU e Implanon",
+    label: "DIU",
     items: [
       {
         q: "A colocação do DIU dói?",
-        a: "A maioria das mulheres relata apenas um leve desconforto, semelhante a uma cólica menstrual, e o procedimento é rápido. Usamos técnicas de acolhimento e orientações prévias para deixar tudo mais tranquilo. Converse com a Dra. Leila na consulta para uma avaliação individualizada.",
+        a: "A maioria das mulheres relata apenas um leve desconforto, semelhante a uma cólica menstrual, e o procedimento é rápido. Para quem prefere maior conforto, a colocação do DIU também pode ser feita com sedação anestésica, sem dor. Converse com a Dra. Leila na consulta para uma avaliação individualizada.",
       },
       {
         q: "Quanto tempo dura o DIU?",
-        a: "Depende do modelo. O DIU de cobre pode durar até 10 anos, o DIU hormonal costuma durar de 5 a 8 anos, e o Implanon (subcutâneo) tem duração de cerca de 3 anos.",
+        a: "Depende do modelo. O DIU de cobre pode durar até 10 anos e o DIU hormonal costuma durar de 5 a 8 anos.",
       },
       {
         q: "O DIU engorda ou causa outros efeitos colaterais?",
@@ -118,6 +122,32 @@ const faqGroups: { id: string; label: string; items: FaqItem[] }[] = [
       {
         q: "Depois de retirar o DIU, quanto tempo leva para engravidar?",
         a: "A fertilidade costuma retornar rapidamente, muitas vezes já no primeiro ciclo após a retirada. Não há efeito prolongado sobre a capacidade de engravidar.",
+      },
+    ],
+  },
+  {
+    id: "implanon",
+    label: "Implanon",
+    items: [
+      {
+        q: "O que é o Implanon?",
+        a: "O Implanon é um implante hormonal subcutâneo, fino e flexível, que libera progesterona de forma gradual. É um método contraceptivo de longa duração e reversível.",
+      },
+      {
+        q: "Quanto tempo dura o Implanon?",
+        a: "O Implanon tem duração de cerca de 3 anos. Após esse período, deve ser trocado ou retirado conforme orientação médica.",
+      },
+      {
+        q: "A colocação do Implanon dói?",
+        a: "O procedimento é rápido e geralmente bem tolerado. Aplica-se anestesia local no braço antes da inserção, minimizando qualquer desconforto.",
+      },
+      {
+        q: "O Implanon engorda?",
+        a: "Algumas mulheres podem notar leve alteração de peso, mas isso varia bastante de pessoa para pessoa. A Dra. Leila orienta sobre os possíveis efeitos e acompanha cada paciente de forma individualizada.",
+      },
+      {
+        q: "Depois de retirar o Implanon, quanto tempo leva para engravidar?",
+        a: "A fertilidade geralmente retorna logo após a retirada do implante, muitas vezes já no primeiro ciclo seguinte.",
       },
     ],
   },
