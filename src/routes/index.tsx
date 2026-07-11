@@ -268,10 +268,47 @@ function Header() {
   );
 }
 
+function HeroDots() {
+  const dots = [
+    { left: "6%", top: "12%", size: 10, delay: 0, duration: 5.2 },
+    { left: "18%", top: "78%", size: 7, delay: 0.8, duration: 4.6 },
+    { left: "32%", top: "22%", size: 5, delay: 1.2, duration: 6.0 },
+    { left: "44%", top: "65%", size: 8, delay: 2.1, duration: 5.0 },
+    { left: "58%", top: "18%", size: 6, delay: 0.4, duration: 4.8 },
+    { left: "72%", top: "72%", size: 9, delay: 1.6, duration: 5.4 },
+    { left: "84%", top: "35%", size: 5, delay: 2.8, duration: 6.2 },
+    { left: "92%", top: "88%", size: 7, delay: 0.2, duration: 4.4 },
+    { left: "12%", top: "48%", size: 4, delay: 3.0, duration: 5.6 },
+    { left: "66%", top: "48%", size: 6, delay: 1.0, duration: 5.8 },
+    { left: "26%", top: "92%", size: 5, delay: 2.4, duration: 4.2 },
+    { left: "78%", top: "10%", size: 8, delay: 0.6, duration: 5.0 },
+  ];
+
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+      {dots.map((dot, i) => (
+        <span
+          key={i}
+          className="absolute rounded-full bg-primary animate-dot-float"
+          style={{
+            left: dot.left,
+            top: dot.top,
+            width: dot.size,
+            height: dot.size,
+            animationDelay: `${dot.delay}s`,
+            animationDuration: `${dot.duration}s`,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 function Hero() {
   return (
     <section id="top" className="relative overflow-hidden h-auto min-h-0">
-      <div className="container-narrow grid md:grid-cols-2 gap-12 md:gap-16 items-center pt-16 md:pt-28 pb-6 md:pb-16 min-h-0">
+      <HeroDots />
+      <div className="relative z-10 container-narrow grid md:grid-cols-2 gap-12 md:gap-16 items-center pt-16 md:pt-28 pb-6 md:pb-16 min-h-0">
         <Reveal>
           <div>
             <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-primary mb-6">
