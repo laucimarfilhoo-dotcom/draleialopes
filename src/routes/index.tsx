@@ -56,7 +56,15 @@ export const Route = createFileRoute("/")({
         },
         {
           q: "Ninfoplastia é só estética ou também tem função de saúde?",
-          a: "Além do resultado estético, pode aliviar desconforto em atividades físicas, na intimidade e no uso de determinadas roupas.",
+          a: "Além do resultado estético, a ninfoplastia pode aliviar desconforto em atividades físicas, na intimidade e no uso de determinadas roupas.",
+        },
+        {
+          q: "Para que serve o laser íntimo?",
+          a: "O laser íntimo é indicado para tratar flacidez, ressecamento, perda de tônus e promover o rejuvenescimento da regi íntima, de forma não cirúrgica.",
+        },
+        {
+          q: "A radiofrequência íntima é invasiva?",
+          a: "Não. A radiofrequência íntima é um procedimento não invasivo que estimula o colágeno e melhora o tônus e a lubrificação da região.",
         },
         {
           q: "Como sei se estou entrando na menopausa?",
@@ -152,8 +160,8 @@ const faqGroups: { id: string; label: string; items: FaqItem[] }[] = [
     ],
   },
   {
-    id: "laser",
-    label: "Laser e Ninfoplastia",
+    id: "ninfoplastia",
+    label: "Ninfoplastia",
     items: [
       {
         q: "Ninfoplastia é só estética ou também tem função de saúde?",
@@ -172,8 +180,34 @@ const faqGroups: { id: string; label: string; items: FaqItem[] }[] = [
         a: "As suturas são finas e feitas em locais estratégicos, ficando bastante discretas com o tempo. O cuidado no pós-operatório é fundamental para o melhor resultado.",
       },
       {
-        q: "Qual a diferença entre o laser íntimo e a cirurgia de ninfoplastia?",
-        a: "O laser íntimo é um procedimento não cirúrgico, indicado principalmente para tratar flacidez, ressecamento e rejuvenescimento da região. A ninfoplastia é uma cirurgia que remodela os pequenos lábios. Cada técnica tem indicações diferentes, definidas em consulta.",
+        q: "Quem pode fazer ninfoplastia?",
+        a: "A ninfoplastia é indicada para mulheres que sentem desconforto físico, insatisfação estética ou dificuldades na intimidade relacionadas ao tamanho ou formato dos pequenos lábios. A avaliação médica define a melhor abordagem para cada caso.",
+      },
+    ],
+  },
+  {
+    id: "laser",
+    label: "Laser e Radiofrequência",
+    items: [
+      {
+        q: "Para que serve o laser íntimo?",
+        a: "O laser íntimo é um procedimento não cirúrgico indicado para tratar flacidez, ressecamento, perda de tônus e promover o rejuvenescimento da região íntima. As sessões são rápidas e a recuperação é praticamente imediata.",
+      },
+      {
+        q: "O laser íntimo é seguro?",
+        a: "Sim, quando realizado por profissional qualificado e com equipamento adequado, o laser íntimo é seguro. A Dra. Leila avalia cada paciente para indicar a melhor tecnologia e o número de sessões ideais.",
+      },
+      {
+        q: "Quantas sessões de laser são necessárias?",
+        a: "O número de sessões varia conforme o objetivo e a resposta de cada organismo. Em geral, são recomendadas de 3 a 5 sessões, com intervalos definidos na consulta.",
+      },
+      {
+        q: "A radiofrequência íntima é invasiva?",
+        a: "Não. A radiofrequência íntima é um procedimento não invasivo que utiliza calor controlado para estimular o colágeno, melhorando o tônus, a lubrificação e a aparência da região sem cortes.",
+      },
+      {
+        q: "Qual a diferença entre laser e radiofrequência íntima?",
+        a: "Ambos são procedimentos não cirúrgicos, mas atuam de formas complementares. O laser costuma focar mais no rejuvenescimento superficial e na hidratação, enquanto a radiofrequência trabalha o tônus e a firmeza em camadas mais profundas. A combinação pode potencializar os resultados.",
       },
     ],
   },
