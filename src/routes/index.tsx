@@ -150,10 +150,6 @@ const faqGroups: { id: string; label: string; items: FaqItem[] }[] = [
         a: "O procedimento é rápido e geralmente bem tolerado. Aplica-se anestesia local no braço antes da inserção, minimizando qualquer desconforto.",
       },
       {
-        q: "O Implanon engorda?",
-        a: "Algumas mulheres podem notar leve alteração de peso, mas isso varia bastante de pessoa para pessoa. A Dra. Leila orienta sobre os possíveis efeitos e acompanha cada paciente de forma individualizada.",
-      },
-      {
         q: "Depois de retirar o Implanon, quanto tempo leva para engravidar?",
         a: "A fertilidade geralmente retorna logo após a retirada do implante, muitas vezes já no primeiro ciclo seguinte.",
       },
