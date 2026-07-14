@@ -207,7 +207,7 @@ const faqGroups: { id: string; label: string; items: FaqItem[] }[] = [
       },
       {
         q: "Qual a diferença entre laser e radiofrequência íntima?",
-        a: "Ambos são procedimentos não cirúrgicos, mas atuam de formas complementares. O laser costuma focar mais no rejuvenescimento superficial e na hidratação, enquanto a radiofrequência trabalha o tônus e a firmeza em camadas mais profundas. A combinação pode potencializar os resultados.",
+        a: "Ambos são procedimentos não cirúrgicos que estimulam a produção de colágeno e elastina, porém atuam de formas diferentes. O laser age principalmente na mucosa vaginal, sendo muito indicado para melhorar ressecamento, atrofia e lubrificação. Já a radiofrequência alcança camadas mais profundas dos tecidos, promovendo além da melhora da lubrificação, tratamento da flacidez e na melhora da firmeza e da qualidade da pele da região íntima. Faça uma avaliação para saber qual seria a tecnologia mais indicada para você.",
       },
     ],
   },
