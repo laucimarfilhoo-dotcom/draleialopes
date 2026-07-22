@@ -32,6 +32,7 @@ import { cn } from "@/lib/utils";
 const whatsappIcon = { url: "/images/whatsapp-icon.png" };
 const draLeilaHero = { url: "/images/dra-leila-hero.jpg" };
 const draLeilaAbout = { url: "/images/dra-leila-about.webp" };
+const draLeilaDiferenciais = { url: "/images/dra-leila-diferenciais.jpg" };
 const logoLeila = { url: "/images/logo-leila-menu.png" };
 
 
@@ -547,32 +548,51 @@ function Differentials() {
   return (
     <section id="diferenciais" className="py-20 md:py-28 bg-white">
       <div className="container-narrow">
-        <Reveal>
-          <div className="max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4">Diferenciais</div>
-            <h2 className="font-serif text-3xl md:text-5xl text-foreground">
-              Um cuidado que vai além da consulta
-            </h2>
-          </div>
-        </Reveal>
-
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {differentials.map((d, i) => (
-            <Reveal key={d.title} delay={i * 120}>
-              <div className="group relative border-t border-primary pt-6 transition-all duration-500 hover:border-t-[3px] hover:-translate-y-2 cursor-default">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/5 text-primary transition-all duration-500 group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 group-hover:-rotate-6 group-hover:shadow-elegant">
-                  <d.icon size={24} className="transition-transform duration-500 group-hover:scale-110" />
-                </div>
-                <h3 className="font-serif text-xl text-foreground mt-4 transition-colors duration-300 group-hover:text-primary">
-                  {d.title}
-                </h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{d.desc}</p>
-                <div className="mt-4 h-px w-0 bg-primary transition-all duration-500 group-hover:w-full" />
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div>
+            <Reveal>
+              <div className="max-w-xl">
+                <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4">Diferenciais</div>
+                <h2 className="font-serif text-3xl md:text-5xl text-foreground">
+                  Um cuidado que vai além da consulta
+                </h2>
+                <p className="mt-4 text-muted-foreground">
+                  Cada detalhe do atendimento foi pensado para que você se sinta acolhida, segura e confiante em todas as fases da vida.
+                </p>
               </div>
             </Reveal>
-          ))}
-        </div>
+            <Reveal delay={120}>
+              <div className="relative mt-10">
+                <div className="absolute -inset-3 border border-primary/30 rounded-[2rem] rotate-2" />
+                <div className="relative aspect-[4/5] w-full max-w-md rounded-[1.75rem] overflow-hidden bg-[var(--blush)] border border-primary/15 shadow-elegant">
+                  <img
+                    src={draLeilaDiferenciais.url}
+                    alt="Dra. Leila Lopes"
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </Reveal>
+          </div>
 
+          <div className="grid sm:grid-cols-2 gap-6">
+            {differentials.map((d, i) => (
+              <Reveal key={d.title} delay={i * 120}>
+                <div className="group relative border-t border-primary pt-6 transition-all duration-500 hover:border-t-[3px] hover:-translate-y-2 cursor-default">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/5 text-primary transition-all duration-500 group-hover:bg-primary group-hover:text-primary-foreground group-hover:scale-110 group-hover:-rotate-6 group-hover:shadow-elegant">
+                    <d.icon size={24} className="transition-transform duration-500 group-hover:scale-110" />
+                  </div>
+                  <h3 className="font-serif text-xl text-foreground mt-4 transition-colors duration-300 group-hover:text-primary">
+                    {d.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{d.desc}</p>
+                  <div className="mt-4 h-px w-0 bg-primary transition-all duration-500 group-hover:w-full" />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
