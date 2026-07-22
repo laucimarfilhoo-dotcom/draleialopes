@@ -32,6 +32,7 @@ import { cn } from "@/lib/utils";
 const whatsappIcon = { url: "/images/whatsapp-icon.png" };
 const draLeilaHero = { url: "/images/dra-leila-hero.jpg" };
 const draLeilaAbout = { url: "/images/dra-leila-about.webp" };
+const draLeilaDiferenciais = { url: "/images/dra-leila-diferenciais.jpg" };
 const logoLeila = { url: "/images/logo-leila-menu.png" };
 
 
