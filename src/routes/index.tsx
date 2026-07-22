@@ -30,7 +30,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Accordion, AccordionItem, AccordionContent } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 const whatsappIcon = { url: "/images/whatsapp-icon.png" };
-const draLeilaHero = { url: "/images/dra-leila-hero.webp" };
+const draLeilaHero = { url: "/images/dra-leila-hero.jpg" };
 const draLeilaAbout = { url: "/images/dra-leila-about.webp" };
 const logoLeila = { url: "/images/logo-leila-menu.png" };
 
