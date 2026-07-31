@@ -196,7 +196,7 @@ const faqGroups: { id: string; label: string; items: FaqItem[] }[] = [
       },
       {
         q: "Quantas sessões de laser são necessárias?",
-        a: "O número de sessões varia conforme o objetivo e a resposta de cada organismo. Em geral, são recomendadas de 3 a 5 sessões, com intervalos definidos na consulta.",
+        a: "Em geral, são recomendadas 3 sessões, com intervalos definidos na consulta conforme a resposta de cada organismo.",
       },
       {
         q: "A radiofrequência íntima é invasiva?",
